@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Latitud y Longitud</title>
+</head>
+<body>
+    <h1>Registrar ciudad</h1>
+    <form method="POST" action="/registrar_ciudad">
+		  <label for="ciudad">Ciudad:</label>
+        <input type="text" name="ciudad" required><br><br>
+        <label for="latitud">Latitud:</label>
+        <input type="text" name="latitud" required><br><br>
+        <label for="longitud">Longitud:</label>
+        <input type="text" name="longitud" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br/><br/>
+	 <form method="GET" action="/mostrar_evaluacion">
+        <input type="submit" value="Calcular Distancia">
+    </form>
+
+    {% if error_msg %}
+    <p style="color: red;">{{ error_msg }}</p>
+    {% endif %}
+</body>
+</html>
